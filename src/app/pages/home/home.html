@@ -1,0 +1,29 @@
+
+<app-slider/>
+<app-categories />
+<div class="max-w-7xl mx-auto mt-6">
+    <h1 class="text-center text-6xl font-medium my-15">NEW ARRIVALS</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 my-19 ">
+        @for (albums of album; track albums.id) {
+            <app-pictureitem [album] = "albums" (clickname)="ClickName($event)" />
+        }
+    </div>
+    <div class="text-center mt-10 mb-16 ">
+        <a [routerLink]="['/list']" class="rounded-3xl border border-b-gray-400 px-8 py-3 font-light hover:bg-gray-100 transition duration-150"> See ALL</a>
+    </div>
+    <h1 class="text-center text-6xl font-bold my-15">TOP SELLING</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 my-14 ">
+        @for (product of products | slice: 0:4; track product.id) {
+            <app-productitem [product]= "product" (addtocart)="addtoCart($event)" />
+        }
+    </div>
+    <div class="text-center mt-10 mb-16 ">
+        <a [routerLink]="['/list']" class="rounded-3xl border border-b-gray-400 px-8 py-3 font-light hover:bg-gray-100 transition duration-150"> See ALL</a>
+    </div>
+</div>
+<app-browser />
+<div class="max-w-7xl mx-auto mt-6">
+    <h1 class="text-left text-5xl font-bold my-15">
+        OUR HAPPY CUSTOMERS
+    </h1>    
+</div>

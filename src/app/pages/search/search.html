@@ -1,0 +1,10 @@
+<div class="max-w-7xl mx-auto my-5">
+    @if (products.length > 0){
+    @for (product of products; track product.id) {
+        <app-productitem [product]= "product" />
+    }
+     }
+    @else {
+        <h5>Không tìm thấy sản phẩm nào</h5>
+    }
+</div>
