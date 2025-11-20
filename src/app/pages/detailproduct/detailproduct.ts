@@ -1,14 +1,14 @@
 import { Component, inject, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { IProduct } from '../../../interface/interface';
 import { Productitem } from "../../components/productitem/productitem";
 import { CommonModule } from '@angular/common'
 
 @Component({
   selector: 'app-detailproduct',
-  imports: [Productitem, CommonModule],
+  imports: [Productitem, CommonModule,],
   templateUrl: './detailproduct.html',
-  styleUrl: './detailproduct.css',
+  styleUrls: ['./detailproduct.css'],
 })
 export class Detailproduct {
   route = inject(ActivatedRoute)

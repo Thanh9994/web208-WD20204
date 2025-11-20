@@ -8,6 +8,7 @@ import { Categories } from "../categories/categories";
 import { Browser } from "../browser/browser";
 import { CommonModule } from '@angular/common'
 import { RouterLink } from "@angular/router";
+import { Categorypage } from '../categorypage/categorypage';
 
 @Component({
   selector: 'app-home',
@@ -43,8 +44,8 @@ export class Home {
         }
   }
 
-  ClickName(album: IAlbum){
-    alert(`Hiển thị ${album.title}`)
+  clickName(albums: IAlbum){
+    alert(`Hiển thị ${albums.title}`)
   }
 
   addtoCart(product: IProduct) {
